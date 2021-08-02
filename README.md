@@ -10,6 +10,6 @@ install.packages("devtools")
 
 library(devtools)
 
-install_github("mengyunwu2020/surInter")
+install_github("mengyunwu2020/survInter")
 
 library(survInter)
