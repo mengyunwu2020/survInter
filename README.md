@@ -1,7 +1,10 @@
 # survInter
 Two-level Bayesian interaction analysis for survival data incorporating pathway information
 
-Please install the package use:
+# Maintainer
+qin.xing@163.sufe.edu.cn
+ 
+# Usage
 
 install.packages("devtools")
 
