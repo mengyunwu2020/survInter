@@ -82,5 +82,5 @@ p_temp=as.numeric(lapply(x,function(x) dim(x)[2]))
 pathway=rep(1:M,p_temp)
 a_init=seq(0.96,0.97,by=0.01)
 s_init=seq(2e-3,3e-3,1e-3)
-temp_1<-survInter(X,ct,pathway,s_init=s_init,a_init=a_init)
+temp_1<-survInter(X,ct,pathway,s_init=s_init,a_init=a_init,tol = 1e-05)
 }
