@@ -75,10 +75,10 @@
 #' pathway=rep(1:M,p_temp)
 #' a_init=seq(0.96,0.97,by=0.01)
 #' s_init=seq(2e-3,3e-3,1e-3)
-#' temp_1<-survInter(X,ct,pathway,s_init=s_init,a_init=a_init)
+#' temp_1<-survInter(X,ct,pathway,s_init=s_init,a_init=a_init,tol=1e-5)
 
 
-survInter<-function(X,ct,pathway,s_init=1e-4,a_init,r_init=NULL,tol=1e-5){
+survInter<-function(X,ct,pathway,s_init=1e-4,a_init,r_init=NULL,tol=1e-3){
 
   t=ct[,1]
   delta=ct[,2]
