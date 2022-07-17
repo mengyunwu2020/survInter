@@ -1,6 +1,4 @@
 #' @export
-library(MASS)
-
 
 x_pro_overlapping<-function(n,n_var=1000,M=100,Sigma){
   #Generating main genetic effects

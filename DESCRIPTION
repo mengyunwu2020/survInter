@@ -9,7 +9,7 @@ Description: This package is created for the practical application of our work '
 License: GPL-2
 Encoding: UTF-8
 Imports: stats, Matrix, MASS
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.0
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 Depends: R (>= 4.0.2)
