@@ -1,5 +1,7 @@
 #' @export
 
+
+
 x_pro_overlapping<-function(n,n_var=1000,M=100,Sigma){
   #Generating main genetic effects
   #@param n sample size
@@ -20,24 +22,24 @@ x_pro_overlapping<-function(n,n_var=1000,M=100,Sigma){
 
   x1=x
 
-  temp=x1[[1]][,( p0-2):p0]
+  temp=x1[[1]][,8:10]
   x[[2]]=cbind(x1[[2]],temp)
   x[[3]]=cbind(x1[[3]],temp)
   x[[4]]=cbind(x1[[4]],temp)
   x[[5]]=cbind(x1[[5]],temp)
-  temp=x1[[6]][,( p0-2):p0]
+  temp=x1[[6]][,8:10]
   for(m in 7:11) x[[m]]=cbind(x1[[m]],temp)
-  temp=x1[[12]][,( p0-2):p0]
+  temp=x1[[12]][,8:10]
   for(m in 13:17) x[[m]]=cbind(x1[[m]],temp)
-  temp=x1[[18]][,( p0-2):p0]
+  temp=x1[[18]][,8:10]
   for(m in 19:23) x[[m]]=cbind(x1[[m]],temp)
-  temp=x1[[24]][,( p0-2):p0]
+  temp=x1[[24]][,8:10]
   for(m in 25:29) x[[m]]=cbind(x1[[m]],temp)
-  temp=x1[[30]][,( p0-2):p0]
+  temp=x1[[30]][,8:10]
   for(m in 31:35) x[[m]]=cbind(x1[[m]],temp)
-  temp=x1[[36]][,( p0-2):p0]
+  temp=x1[[36]][,8:10]
   for(m in 37:40) x[[m]]=cbind(x1[[m]],temp)
-  temp=x1[[41]][,p0]
+  temp=x1[[41]][,10]
   for(m in 42) x[[m]]=cbind(x1[[m]],temp)
 
 

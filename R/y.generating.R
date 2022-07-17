@@ -32,16 +32,7 @@ y.generating<-function(n,x,X,rate,a1,a2,a3,a4,a5,b1,b2,b3,b4,b5,M,p,c){
     }
     Phix[[M+cp]]=temp1
   }
-  for(m in M){
 
-    temp1=matrix(NA,n,(p0*p0))
-    r=1
-    for(i in 1:p0){
-      temp1[,r:(r+p0-1)]=(x[[3]][,1:p0])*(x[[2]][,i])
-      r=r+p0
-    }
-    Phix[[(2*M)]]=temp1
-  }
 
   b_s_int=p*(p-1)/2+p
   pp_int=p_hat*M
@@ -97,11 +88,11 @@ y.generating<-function(n,x,X,rate,a1,a2,a3,a4,a5,b1,b2,b3,b4,b5,M,p,c){
   real_w[[M+1]][1:length(c[,1])]=c[,1]
   real_w[[M+2]][1:length(c[,2])]=c[,2]
   real_w[[M+3]][1:length(c[,3])]=c[,3]
-  real_w[[(2*M)]][1:length(c[,4])]=c[,4]
+
 
 
   real_y=0
-  for(m in c(1:5,(M+1),(M+2),(M+3),(2*M))){
+  for(m in c(1:5,(M+1),(M+2),(M+3))){
     real_y=Phix[[m]]%*%real_w[[m]]+real_y
   }
 
