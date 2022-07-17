@@ -4,7 +4,7 @@
 \alias{survInter}
 \title{Two-level Bayesian interaction analysis for survival data incorporating pathway information}
 \usage{
-survInter(X, ct, pathway, s_init = 1e-04, a_init, r_init = NULL, tol = 1e-03)
+survInter(X, ct, pathway, s_init = 1e-04, a_init, r_init = NULL, tol = 0.001)
 }
 \arguments{
 \item{X}{a matrix of predictor variables}
