@@ -32,25 +32,34 @@ y.generating<-function(n,x,X,rate,a1,a2,a3,a4,a5,b1,b2,b3,b4,b5,M,p,c){
     }
     Phix[[M+cp]]=temp1
   }
+  for(m in M){
 
+    temp1=matrix(NA,n,(p0*p0))
+    r=1
+    for(i in 1:p0){
+      temp1[,r:(r+p0-1)]=(x[[3]][,1:p0])*(x[[2]][,i])
+      r=r+p0
+    }
+    Phix[[(2*M)]]=temp1
+  }
 
   b_s_int=p*(p-1)/2+p
   pp_int=p_hat*M
   p_sum_int=p
   p_int=rep(p0,M)
-  M_int=M
-  r=1
-  temp2=0
-  s=0
-  Phi2_int=matrix(0,n,(b_s_int-pp_int))
-  for(m in 1:(M_int-1)){
-    temp=p_sum_int-temp2-p_int[m]
-    for(i in 1:p_int[m]){
-      Phi2_int[,((i-1)*temp+1+s):(i*temp+s)]=X[,(temp2+i)]*X[,(p_int[m]+temp2+1):p_sum_int]
-    }
-    temp2=temp2+p_int[m]
-    s=temp*p_int[m]+s
-  }
+  # M_int=M
+  # r=1
+  # temp2=0
+  # s=0
+  # Phi2_int=matrix(0,n,(b_s_int-pp_int))
+  # for(m in 1:(M_int-1)){
+  #   temp=p_sum_int-temp2-p_int[m]
+  #   for(i in 1:p_int[m]){
+  #     Phi2_int[,((i-1)*temp+1+s):(i*temp+s)]=X[,(temp2+i)]*X[,(p_int[m]+temp2+1):p_sum_int]
+  #   }
+  #   temp2=temp2+p_int[m]
+  #   s=temp*p_int[m]+s
+  # }
 
   inter.group=matrix(0,p_sum_int,p_sum_int)
   r=s=ii=1
@@ -88,11 +97,11 @@ y.generating<-function(n,x,X,rate,a1,a2,a3,a4,a5,b1,b2,b3,b4,b5,M,p,c){
   real_w[[M+1]][1:length(c[,1])]=c[,1]
   real_w[[M+2]][1:length(c[,2])]=c[,2]
   real_w[[M+3]][1:length(c[,3])]=c[,3]
-
+  real_w[[(2*M)]][1:length(c[,4])]=c[,4]
 
 
   real_y=0
-  for(m in c(1:5,(M+1),(M+2),(M+3))){
+  for(m in c(1:5,(M+1),(M+2),(M+3),(2*M))){
     real_y=Phix[[m]]%*%real_w[[m]]+real_y
   }
 
