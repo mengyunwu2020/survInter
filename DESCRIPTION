@@ -1,17 +1,14 @@
 Package: survInter
 Type: Package
-Title: Two-level Bayesian interaction analysis for survival data
-        incorporating pathway information
+Title: Two-level Bayesian interaction analysis for survival data incorporating pathway information
 Version: 0.1.0
 Author: Xing Qin
 Maintainer: Xing Qin <qin.xing@163.sufe.edu.cn>
-Description: This package is created for the practical application of our work 'two-level Bayesian interaction analysis for survival data incorporating pathway information'
+Description: This package is created for the practical application of our work 'two-level Bayesian interaction analysis for survival data incorporating pathway information'.
 License: GPL-2
 Encoding: UTF-8
-Imports: stats, Matrix, MASS
-RoxygenNote: 7.2.0
+Imports: stats, MASS
+RoxygenNote: 7.2.1
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
-Depends: R (>= 4.0.2)
-NeedsCompilation: no
-Packaged: 2021-08-01 13:26:51 UTC; qx
+Depends: R (>= 3.3.0)

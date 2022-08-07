@@ -38,19 +38,7 @@ y.generating<-function(n,x,X,rate,a1,a2,a3,a4,a5,b1,b2,b3,b4,b5,M,p,c){
   pp_int=p_hat*M
   p_sum_int=p
   p_int=rep(p0,M)
-  # M_int=M
-  # r=1
-  # temp2=0
-  # s=0
-  # Phi2_int=matrix(0,n,(b_s_int-pp_int))
-  # for(m in 1:(M_int-1)){
-  #   temp=p_sum_int-temp2-p_int[m]
-  #   for(i in 1:p_int[m]){
-  #     Phi2_int[,((i-1)*temp+1+s):(i*temp+s)]=X[,(temp2+i)]*X[,(p_int[m]+temp2+1):p_sum_int]
-  #   }
-  #   temp2=temp2+p_int[m]
-  #   s=temp*p_int[m]+s
-  # }
+
 
   inter.group=matrix(0,p_sum_int,p_sum_int)
   r=s=ii=1

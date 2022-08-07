@@ -3,12 +3,8 @@
 #' One of the main functions in the survInter package. Fits a path of survInter models over different values of the tunning parameters.
 #'
 
-#' @importFrom stats var
-#' @importFrom stats rnorm
-#' @importFrom stats rgamma
-#' @importFrom stats dnorm
-#' @importFrom stats pnorm
-#' @importFrom MASS mvrnorm
+#' @import stats
+#' @import MASS
 #' @export
 #'
 #' @param X a matrix of predictor variables
@@ -25,7 +21,6 @@
 #' \item{mean_w_red}{The coefficients vector}
 #' \item{beta_interaction}{The coefficients of interaction terms}
 #' \item{beta_main}{The coefficients of main effects}
-#' \item{BIC}{Bayesian Information Criterion}
 #' \item{df}{The number of nonzero coefficients}
 #' \item{index_path}{Selected networks' number}
 #' @examples
@@ -544,10 +539,10 @@ survInter<-function(X,ct,pathway,s_init=1e-4,a_init,r_init=NULL,tol=1e-3){
       mean_w_red[index_pred]=mean_w_ori[index_pred]
 
       df=length(which(eta>0.5))
-      BIC=log(error)+df*log(n.observed)/n.observed
+
       beta_interaction=c(mean_w_red[c(within_interaction_location_int,c((pp_int+1):b_s_int))])#
       beta_main=mean_w_red[node_location_int]
-      temp_2=list(mean_w_red=mean_w_red,beta_interaction=beta_interaction,beta_main=beta_main,BIC=BIC,df=df,index_path=index_path_ori)
+      temp_2=list(mean_w_red=mean_w_red,beta_interaction=beta_interaction,beta_main=beta_main,df=df,index_path=index_path_ori)
       result_temp[[lll]]<-temp_2
       lll=lll+1
 

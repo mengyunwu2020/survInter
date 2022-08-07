@@ -28,7 +28,6 @@ a list, each element corresponding to its tunning parameters contains values  as
 \item{mean_w_red}{The coefficients vector}
 \item{beta_interaction}{The coefficients of interaction terms}
 \item{beta_main}{The coefficients of main effects}
-\item{BIC}{Bayesian Information Criterion}
 \item{df}{The number of nonzero coefficients}
 \item{index_path}{Selected networks' number}
 }
