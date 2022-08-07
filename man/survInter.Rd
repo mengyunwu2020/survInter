@@ -10,29 +10,29 @@ survInter(X, ct, pathway, s_init = 1e-04, a_init, r_init = NULL, tol = 0.001)
 \item{X}{a matrix of predictor variables}
 
 \item{ct}{a two-column matrix with the first column being the survival time and the second column being the censoring indicator.
-The indicator is a binary variable, with "1" indicating dead, and "0" indicating right censored.}
+The indicator is a binary variable, with "1" indicating dead, and "0" indicating right censored}
 
 \item{pathway}{a vector of pathway information, for instance,
 value 1 represent the corresponding node location belongs to pathway 1}
 
-\item{s_init}{a vector of tunning parameter related to the variance}
+\item{s_init}{a vector of tuning parameter related to the variance}
 
 \item{a_init}{a vector of the initial selecting probability}
 
-\item{r_init}{a vector of tunning parameter related to the variance}
+\item{r_init}{a vector of tuning parameter related to the variance}
 
 \item{tol}{convergence tolerance}
 }
 \value{
-a list, each element corresponding to its tunning parameters contains values  as follows:
+a list, each element corresponding to its tuning parameters contains the following values:
 \item{mean_w_red}{The coefficients vector}
 \item{beta_interaction}{The coefficients of interaction terms}
 \item{beta_main}{The coefficients of main effects}
 \item{df}{The number of nonzero coefficients}
-\item{index_path}{Selected networks' number}
+\item{index_path}{Selected pathways' number}
 }
 \description{
-One of the main functions in the survInter package. Fits a path of survInter models over different values of the tunning parameters.
+One of the main functions in the survInter package. Fits a path of survInter models over different values of the tuning parameters.
 }
 \examples{
 set.seed(11)

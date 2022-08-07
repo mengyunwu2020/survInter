@@ -1,6 +1,6 @@
 #' Two-level Bayesian interaction analysis for survival data incorporating pathway information
 #'
-#' One of the main functions in the survInter package. Fits a path of survInter models over different values of the tunning parameters.
+#' One of the main functions in the survInter package. Fits a path of survInter models over different values of the tuning parameters.
 #'
 
 #' @import stats
@@ -9,20 +9,20 @@
 #'
 #' @param X a matrix of predictor variables
 #' @param ct a two-column matrix with the first column being the survival time and the second column being the censoring indicator.
-#' The indicator is a binary variable, with "1" indicating dead, and "0" indicating right censored.
+#' The indicator is a binary variable, with "1" indicating dead, and "0" indicating right censored
 #' @param pathway a vector of pathway information, for instance,
 #' value 1 represent the corresponding node location belongs to pathway 1
-#' @param s_init a vector of tunning parameter related to the variance
+#' @param s_init a vector of tuning parameter related to the variance
 #' @param a_init a vector of the initial selecting probability
-#' @param r_init a vector of tunning parameter related to the variance
+#' @param r_init a vector of tuning parameter related to the variance
 #' @param tol convergence tolerance
 #'
-#' @return a list, each element corresponding to its tunning parameters contains values  as follows:
+#' @return a list, each element corresponding to its tuning parameters contains the following values:
 #' \item{mean_w_red}{The coefficients vector}
 #' \item{beta_interaction}{The coefficients of interaction terms}
 #' \item{beta_main}{The coefficients of main effects}
 #' \item{df}{The number of nonzero coefficients}
-#' \item{index_path}{Selected networks' number}
+#' \item{index_path}{Selected pathways' number}
 #' @examples
 #' set.seed(11)
 #' u=runif(15,0.8,1.2)
